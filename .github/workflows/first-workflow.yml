@@ -11,3 +11,14 @@ jobs:
               run: |
                 node -v
                 npm -v
+    parallel-job-macos:
+        runs-on: macos-latest
+        steps:
+            - name: View SW Version
+              run: sw_vers
+    depend-job:
+        runs-on: window-latest
+        needs: run-sheel-commands
+        steps:
+            - name: each a string
+              run: Write-Output "Window String"
