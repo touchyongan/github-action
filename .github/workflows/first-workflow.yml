@@ -22,5 +22,3 @@ jobs:
         steps:
             - name: each a string
               run: Write-Output "Window String"
-            - name: error step
-              run: doesnotexists
